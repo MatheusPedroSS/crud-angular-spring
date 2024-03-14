@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AppMaterialModule } from '../../shared/app-material/app-material.module';
 import { Course } from '../model/course';
 import { CoursesService } from '../services/courses.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-courses',
@@ -14,7 +15,7 @@ import { CoursesService } from '../services/courses.service';
 })
 export class CoursesComponent {
 
-   courses: Course[];
+   courses: Observable<Course[]>;
    displayedColumns = ['name', 'category']
 
    constructor(private coursesService: CoursesService) {
