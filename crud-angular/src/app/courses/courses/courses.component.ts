@@ -5,12 +5,14 @@ import { ErrorDialogComponent } from '../../shared/components/error-dialog/error
 import { Course } from '../model/course';
 import { CoursesService } from '../services/courses.service';
 import { AppMaterialModule } from '../../shared/app-material/app-material.module';
+import { SharedModule } from '../../shared/shared.module';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
   imports: [
-    AppMaterialModule
+    AppMaterialModule,
+    SharedModule
   ],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
